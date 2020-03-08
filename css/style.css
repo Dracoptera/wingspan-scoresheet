@@ -1,0 +1,49 @@
+
+body {
+    background-image: url(/img/bird_background.jpg);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: top;
+    /* position: relative; */
+    /* opacity: 0.7; */
+    height: 90vh;
+    margin-top: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#header h1 {
+    font-family: 'Sen', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    text-align: center;
+    color: #af460f;
+}
+
+#header img {
+    width: 10%;
+}
+
+#main table .bg-primary {
+    color: #ffffff;
+}
+
+#footer img {
+    width: 4%;
+}
+
+#footer a {
+    color: #fe8761;
+}
+
+#footer a:hover {
+    color: #c70d3a;
+    text-decoration: none;
+}
+
+.page-footer {
+    color: #af460f;
+    background-color: #f6eec9;
+    margin-top: 3rem;
+}
+
+
