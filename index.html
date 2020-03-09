@@ -1,126 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Sen:400,700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
 
-    <title>Wingspan Scoresheet</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Sen:400,700&display=swap" rel="stylesheet">
+
+  <title>Wingspan Scoresheet</title>
 </head>
+
 <body>
 
 
-    <header id="header">
-      <h1 class="p-3"><img src="/img/bird.svg">Wingspan scoresheet<img src="/img/hummingbird.svg"></h1>
-    </header>
+  <header id="header">
+    <h1 class="p-3"><img src="/img/bird.svg">Wingspan scoresheet<img src="/img/hummingbird.svg"></h1>
+  </header>
+  
+  <section id="player-count">
 
-    <section id="main">
-        <div class="container">
-           
-               
-                <table class="table table-responsive">
-                    <thead class="thead-dark">
-                      <tr>
-                        <th scope="col"></th>
-                        <th scope="col"><input type="text" class="w-50" name="p1" id="p1" placeholder="P1"></th>
-                        <th scope="col"><input type="text" class="w-50" name="p2" id="p2" placeholder="P2"></th>
-                        <th scope="col"><input type="text" class="w-50" name="p3" id="p3" placeholder="P3"></th>
-                        <th scope="col"><input type="text" class="w-50" name="p4" id="p4" placeholder="P4"></th>
-                        <th scope="col"><input type="text" class="w-50" name="p5" id="p5" placeholder="P5"></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr id="birds" class="table-primary">
-                        <th scope="row">Birds</th>
-                        <td><input class="w-50" type="number" name="birds" id="birds1"></td>
-                        <td><input class="w-50" type="number" name="birds" id="birds2"></td>
-                        <td><input class="w-50" type="number" name="birds" id="birds3"></td>
-                        <td><input class="w-50" type="number" name="birds" id="birds4"></td>
-                        <td><input class="w-50" type="number" name="birds" id="birds5"></td>
-                      </tr>
-                      <tr id="bonus" class="bg-primary">
-                        <th scope="row">Bonus Cards</th>
-                        <td><input class="w-50" type="number" name="bonus" id="bonus1"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="bonus2"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="bonus3"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="bonus4"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="bonus5"></td>
-                      </tr>
-                      <tr id="round" class="table-primary">
-                        <th scope="row">Round Goals</th>
-                        <td><input class="w-50" type="number" name="bonus" id="round1"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="round2"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="round3"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="round4"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="round5"></td>
-                      </tr>
-                      <tr id="eggs" class="bg-primary">
-                        <th scope="row">Eggs</th>
-                        <td><input class="w-50" type="number" name="bonus" id="eggs1"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="eggs2"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="eggs3"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="eggs4"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="eggs5"></td>
-                      </tr>
-                      <tr id="food" class="table-primary">
-                        <th scope="row">Food on cards</th>
-                        <td><input class="w-50" type="number" name="bonus" id="food1"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="food2"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="food3"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="food4"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="food5"></td>
-                      </tr>
-                      <tr id="tucked" class="bg-primary">
-                        <th scope="row">Tucked cards</th>
-                        <td><input class="w-50" type="number" name="bonus" id="tucked1"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="tucked2"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="tucked3"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="tucked4"></td>
-                        <td><input class="w-50" type="number" name="bonus" id="tucked5"></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  
-            
-            <!-- <div class="col m-3">
+    <div class="container">
+      
+      <div class="centered text-center">
+        <form class="m-3">
+          
+          <div class="form-group">
+            <label for="player-select">Select player count:</label>
+            <select class="form-control" id="player-select">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <button class="btn btn-info btn-lg" id="player-count-btn">Set Players</button>
+        </form>
+
+    </div>
+
+     
+    </div>
+  </section>
+
+  <section id="main">
+    <div class="container">
+
+
+      <table class="table table-responsive">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col"><input type="text" class="w-50" name="p1" id="p1" placeholder="P1"></th>
+            <th scope="col"><input type="text" class="w-50" name="p2" id="p2" placeholder="P2"></th>
+            <th scope="col"><input type="text" class="w-50" name="p3" id="p3" placeholder="P3"></th>
+            <th scope="col"><input type="text" class="w-50" name="p4" id="p4" placeholder="P4"></th>
+            <th scope="col"><input type="text" class="w-50" name="p5" id="p5" placeholder="P5"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="birds" class="table-primary">
+            <th scope="row">Birds</th>
+            <td><input class="w-50 p1" type="number" name="birds" id="birds1"></td>
+            <td><input class="w-50 p2" type="number" name="birds" id="birds2"></td>
+            <td><input class="w-50 p3" type="number" name="birds" id="birds3"></td>
+            <td><input class="w-50 p4" type="number" name="birds" id="birds4"></td>
+            <td><input class="w-50 p5" type="number" name="birds" id="birds5"></td>
+          </tr>
+          <tr id="bonus" class="bg-primary">
+            <th scope="row">Bonus Cards</th>
+            <td><input class="w-50 p1" type="number" name="bonus" id="bonus1"></td>
+            <td><input class="w-50 p2" type="number" name="bonus" id="bonus2"></td>
+            <td><input class="w-50 p3" type="number" name="bonus" id="bonus3"></td>
+            <td><input class="w-50 p4" type="number" name="bonus" id="bonus4"></td>
+            <td><input class="w-50 p5" type="number" name="bonus" id="bonus5"></td>
+          </tr>
+          <tr id="round" class="table-primary">
+            <th scope="row">Round Goals</th>
+            <td><input class="w-50 p1" type="number" name="bonus" id="round1"></td>
+            <td><input class="w-50 p2" type="number" name="bonus" id="round2"></td>
+            <td><input class="w-50 p3" type="number" name="bonus" id="round3"></td>
+            <td><input class="w-50 p4" type="number" name="bonus" id="round4"></td>
+            <td><input class="w-50 p5" type="number" name="bonus" id="round5"></td>
+          </tr>
+          <tr id="eggs" class="bg-primary">
+            <th scope="row">Eggs</th>
+            <td><input class="w-50 p1" type="number" name="bonus" id="eggs1"></td>
+            <td><input class="w-50 p2" type="number" name="bonus" id="eggs2"></td>
+            <td><input class="w-50 p3" type="number" name="bonus" id="eggs3"></td>
+            <td><input class="w-50 p4" type="number" name="bonus" id="eggs4"></td>
+            <td><input class="w-50 p5" type="number" name="bonus" id="eggs5"></td>
+          </tr>
+          <tr id="food" class="table-primary">
+            <th scope="row">Food on cards</th>
+            <td><input class="w-50 p1" type="number" name="bonus" id="food1"></td>
+            <td><input class="w-50 p2" type="number" name="bonus" id="food2"></td>
+            <td><input class="w-50 p3" type="number" name="bonus" id="food3"></td>
+            <td><input class="w-50 p4" type="number" name="bonus" id="food4"></td>
+            <td><input class="w-50 p5" type="number" name="bonus" id="food5"></td>
+          </tr>
+          <tr id="tucked" class="bg-primary">
+            <th scope="row">Tucked cards</th>
+            <td><input class="w-50 p1" type="number" name="bonus" id="tucked1"></td>
+            <td><input class="w-50 p2" type="number" name="bonus" id="tucked2"></td>
+            <td><input class="w-50 p3" type="number" name="bonus" id="tucked3"></td>
+            <td><input class="w-50 p4" type="number" name="bonus" id="tucked4"></td>
+            <td><input class="w-50 p5" type="number" name="bonus" id="tucked5"></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <!-- <div class="col m-3">
                <img class="img-fluid" src="/img/hummingbird.svg">
             </div>
         </div> -->
 
-        <div class="text-center">
-          <button class="btn btn-success btn-lg m-2">Calculate</button>
-        </div>
+      <div class="text-center">
+        <button class="btn btn-success btn-lg m-2" id="calculate">Calculate</button>
+      </div>
 
-        </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="facebook">
+  <section id="facebook">
 
-    </section>
+  </section>
 
 
   <!-- Footer -->
-<footer id="footer" class="page-footer">
+  <footer id="footer" class="page-footer">
 
-  <!-- Copyright -->
-  
-  <div class="container text-center p-4">
-    <p>Created by <strong><a href="https://github.com/Dracoptera">dracoptera</a></strong>. <img src="/img/dracoptera.png"></p>
-    <div>Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-    <div>Photo by <a href="https://unsplash.com/@katekerdi">Katerina Kerdi</a> on <a href="https://unsplash.com/">Unsplash</a></div>
-  </div>
-  <!-- Copyright -->
+    <!-- Copyright -->
 
-</footer>
-<!-- Footer -->
+    <div class="container text-center p-4">
+      <p>Created by <strong><a href="https://github.com/Dracoptera">dracoptera</a></strong>. <img
+          src="/img/dracoptera.png"></p>
+      <div>Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a
+          href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+      <div>Photo by <a href="https://unsplash.com/@katekerdi">Katerina Kerdi</a> on <a
+          href="https://unsplash.com/">Unsplash</a></div>
+    </div>
+    <!-- Copyright -->
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </footer>
+  <!-- Footer -->
+  <script src="/js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
 </body>
+
 </html>

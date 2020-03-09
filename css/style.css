@@ -27,6 +27,10 @@ body {
     color: #ffffff;
 }
 
+#player-count {
+    font-size: 1.3rem;
+}
+
 #footer img {
     width: 4%;
 }
@@ -40,6 +44,7 @@ body {
     text-decoration: none;
 }
 
+
 .page-footer {
     color: #af460f;
     background-color: #f6eec9;
@@ -47,3 +52,9 @@ body {
 }
 
 
+
+
+.centered{
+    margin: 0 auto;
+    width:70% 
+}
