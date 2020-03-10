@@ -58,3 +58,12 @@ body {
     margin: 0 auto;
     width:70% 
 }
+
+.centered-lg {
+    margin: 0 auto;
+    width:80% 
+}
+
+.hidden {
+    display: none;
+}
