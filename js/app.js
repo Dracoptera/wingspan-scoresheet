@@ -2,16 +2,21 @@
 
 const calculateBtn = document.querySelector("#calculate");
 const countBtn = document.querySelector("#player-count-btn");
+const resetBtn = document.querySelector("#reset-btn");
+
+// let playerNumber;
 
 let playerCount = document.querySelector("#player-select");
 
-let p1 = document.querySelectorAll(".p1");
-let p2 = document.querySelectorAll(".p2");
-let p3 = document.querySelectorAll(".p3");
-let p4 = document.querySelectorAll(".p4");
-let p5 = document.querySelectorAll(".p5");
+// let p1 = document.querySelectorAll(".p1");
+// let p2 = document.querySelectorAll(".p2");
+// let p3 = document.querySelectorAll(".p3");
+// let p4 = document.querySelectorAll(".p4");
+// let p5 = document.querySelectorAll(".p5");
 
-let allColumns = document.querySelectorAll("tr");
+// let playerColumn = document.querySelectorAll(`.p${playerNumber}`);
+
+
 
 const playerPoints = {
     p1: [],
@@ -22,34 +27,33 @@ const playerPoints = {
 };
 
 function deletePlayer(player) {
-    player.forEach(function(score){
-        score.classList.add("hidden")
+    
+    let playerColumn = document.querySelectorAll(`.p${player}`);
+    playerColumn.forEach(function(score){
+        score.classList.add("d-none")
+        // console.log(playerColumn)
     })
 }
 
 function setPlayers(e) {
+    
     currentPlayers = parseInt(playerCount.value);
-    let toDelete;
     // DELETE ROW FUNCTION
-    if (currentPlayers === 4){
-        deletePlayer(p5);
-    } else if (currentPlayers === 3){
-        deletePlayer(p4)
-        deletePlayer(p5)
-    } else if (currentPlayers === 2){
-        deletePlayer(p3)
-        deletePlayer(p4)
-        deletePlayer(p5)
-       
-    }
-
-    // p1.forEach(function(score){
-    //     score.classList.add("hidden")
-    // })
+    for (let i = 5; i > currentPlayers; i--) {
+            deletePlayer(`${i}`);
+        }
     e.preventDefault();
 }
 
- 
+
+function resetCount(){
+    let allHidden = document.querySelectorAll(".d-none");
+    allHidden.forEach(function(element){
+        element.classList.remove("d-none")
+    })
+}
+
+
 
 console.log(playerPoints.p1)
 
@@ -73,4 +77,4 @@ function calculatePoints() {
 
 calculateBtn.addEventListener("click", calculatePoints);
 countBtn.addEventListener("click", setPlayers)
-
+resetBtn.addEventListener("click", resetCount)

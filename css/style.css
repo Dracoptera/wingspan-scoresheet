@@ -1,6 +1,7 @@
 
 body {
     background-image: url(/img/bird_background.jpg);
+    background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.4);
     background-size: cover;
     background-position: top;
@@ -21,6 +22,13 @@ body {
 
 #header img {
     width: 10%;
+}
+
+.form-group label {
+    background-color: #af460f;
+    color: #f6eec9;
+    border-radius: 7px;
+    padding: 0.5rem 0.5rem;
 }
 
 #main table .bg-primary {
@@ -64,6 +72,8 @@ body {
     width:80% 
 }
 
-.hidden {
+/* .hidden {
     display: none;
-}
+    visibility: hidden;
+ 
+} */
