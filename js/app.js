@@ -1,30 +1,16 @@
-// TODO Implement player count
-
 const calculateBtn = document.querySelector("#calculate");
 const countBtn = document.querySelector("#player-count-btn");
 const resetBtn = document.querySelector("#reset-btn");
-
-// let playerNumber;
+const winnerBox = document.querySelector("#winner");
 
 let playerCount = document.querySelector("#player-select");
+let playerNames = [];
+let finalPoints = {};
+let winner; 
 
-// let p1 = document.querySelectorAll(".p1");
-// let p2 = document.querySelectorAll(".p2");
-// let p3 = document.querySelectorAll(".p3");
-// let p4 = document.querySelectorAll(".p4");
-// let p5 = document.querySelectorAll(".p5");
-
-// let playerColumn = document.querySelectorAll(`.p${playerNumber}`);
-
-
-
-const playerPoints = {
-    p1: [],
-    p2: [],
-    p3: [],
-    p4: [],
-    p5: []
-};
+const playerPoints = [
+    [], [], [], [], []
+]
 
 function deletePlayer(player) {
     
@@ -36,7 +22,6 @@ function deletePlayer(player) {
 }
 
 function setPlayers(e) {
-    
     currentPlayers = parseInt(playerCount.value);
     // DELETE ROW FUNCTION
     for (let i = 5; i > currentPlayers; i--) {
@@ -46,34 +31,63 @@ function setPlayers(e) {
 }
 
 
-function resetCount(){
+function resetCount(e){
     let allHidden = document.querySelectorAll(".d-none");
+    let allInputs = document.querySelectorAll("input");
+
     allHidden.forEach(function(element){
         element.classList.remove("d-none")
-    })
+    });
+
+    allInputs.forEach(input =>
+        input.value = "");
+
+    winnerBox.innerHTML = ``;
+    e.preventDefault();
 }
 
-
-
-console.log(playerPoints.p1)
-
-
-
 function calculatePoints() {
+    currentPlayers = parseInt(playerCount.value);
+    currentNames = document.querySelectorAll(".pName");
+    playerTotal = [];
     
-    p1.forEach(function(score){
-        if (score.value !== "") {
-        playerPoints.p1.push(parseInt(score.value));
-        }
+    for(let i = 0; i < currentPlayers; i++) {
+        document.querySelectorAll(`input[type="number"].p${i+1}`).forEach(function(score){
+            if (score.value !== "") {
+            playerPoints[i].push(parseInt(score.value));
+            }
+        });
+        // Sum total on each row and add it to new Array (Total Score): 
+        playerTotal.push(playerPoints[i].reduce((a, b) => a + b, 0));
+    }
+
+    currentNames.forEach(function(name){
+        playerNames.push(name.value)
+    })
+
+    playerNames.forEach(function(name, i){
+        finalPoints[name] = playerTotal[i];
     });
-    console.log(playerPoints.p1)
-    p1Total = playerPoints.p1.reduce((a, b) => a + b, 0);
-    console.log(p1Total)
+    
+    let sortable = [];
+        for (const name in finalPoints) {
+            sortable.push([name, finalPoints[name]]);
+    }
+
+    sortable.sort(function(a, b) {
+        return b[1] - a[1];
+    });
+
+    winner = sortable[0]
+
+    winnerBox.innerHTML = `
+    
+    <h1><img src="/img/swan.svg"> <span class="remark">${winner[0]}</span> is the winner, with <span class="remark">${winner[1]}</span> points! <img src="/img/duck.svg"><h1>
+    
+    `
+    
 };
 
-// btn.addEventListener("click", () => {
-//     calculatePoints()
-// });
 
 calculateBtn.addEventListener("click", calculatePoints);
 countBtn.addEventListener("click", setPlayers)

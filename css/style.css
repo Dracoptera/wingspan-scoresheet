@@ -39,6 +39,21 @@ body {
     font-size: 1.3rem;
 }
 
+#winner {
+    color: #af460f;
+    margin-top: 1rem;
+}
+
+#winner .remark {
+    color: #f6eec9;
+    font-weight: 700;
+}
+
+#winner img {
+    width: 10%;
+    margin: 0.5rem;
+}
+
 #footer img {
     width: 4%;
 }

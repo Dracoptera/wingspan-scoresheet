@@ -32,10 +32,10 @@
           <div class="form-group">
             <label for="player-select">Select player count:</label>
             <select class="form-control" id="player-select">
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
               <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
             </select>
           </div>
           <button class="btn btn-warning btn-lg" id="player-count-btn">Set Players</button>
@@ -57,11 +57,11 @@
         <thead class="thead-dark">
           <tr>
             <th scope="col"></th>
-            <th scope="col"><input type="text" class="w-cu p1" name="p1" id="p1" placeholder="P1"></th>
-            <th scope="col"><input type="text" class="w-cu p2" name="p2" id="p2" placeholder="P2"></th>
-            <th scope="col"><input type="text" class="w-cu p3" name="p3" id="p3" placeholder="P3"></th>
-            <th scope="col"><input type="text" class="w-cu p4" name="p4" id="p4" placeholder="P4"></th>
-            <th scope="col"><input type="text" class="w-cu p5" name="p5" id="p5" placeholder="P5"></th>
+            <th scope="col"><input type="text" class="w-cu p1 pName" name="p1" id="p1" value="P1" placeholder="P1"></th>
+            <th scope="col"><input type="text" class="w-cu p2 pName" name="p2" id="p2" value="P2" placeholder="P2"></th>
+            <th scope="col"><input type="text" class="w-cu p3 co pName" name="p3" id="p3" value="P3" placeholder="P3"></th>
+            <th scope="col"><input type="text" class="w-cu p4 pName" name="p4" id="p4" value="P4" placeholder="P4"></th>
+            <th scope="col"><input type="text" class="w-cu p5 pName" name="p5" id="p5" value="P5" placeholder="P5"></th>
           </tr>
         </thead>
         <tbody>
@@ -130,8 +130,14 @@
     </div>
   </section>
 
-  <section id="facebook">
+  <section id="results">
+    <div class="container">
 
+      <div class="text-center" id="winner">
+
+      </div>
+
+    </div>
   </section>
 
 
