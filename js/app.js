@@ -1,3 +1,7 @@
+// TODO Auto-select upon changing number
+// TODO Adding score lists
+// TODO Adding tie option
+
 const calculateBtn = document.querySelector("#calculate");
 const countBtn = document.querySelector("#player-count-btn");
 const resetBtn = document.querySelector("#reset-btn");
@@ -31,19 +35,21 @@ function setPlayers(e) {
 }
 
 
-function resetCount(e){
-    let allHidden = document.querySelectorAll(".d-none");
-    let allInputs = document.querySelectorAll("input");
+function resetCount(){
+    // let allHidden = document.querySelectorAll(".d-none");
+    // let allInputs = document.querySelectorAll("input");
 
-    allHidden.forEach(function(element){
-        element.classList.remove("d-none")
-    });
+    // allHidden.forEach(function(element){
+    //     element.classList.remove("d-none")
+    // });
 
-    allInputs.forEach(input =>
-        input.value = "");
+    // allInputs.forEach(input =>
+    //     input.value = "");
 
-    winnerBox.innerHTML = ``;
-    e.preventDefault();
+    // winnerBox.innerHTML = ``;
+    // e.preventDefault();
+
+    location.reload();
 }
 
 function calculatePoints() {
