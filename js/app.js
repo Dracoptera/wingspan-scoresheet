@@ -88,7 +88,6 @@ function calculatePoints() {
     
 };
 
-window.addEventListener("load", resetCount);
 calculateBtn.addEventListener("click", calculatePoints);
 countBtn.addEventListener("click", setPlayers);
 resetBtn.addEventListener("click", resetCount);
